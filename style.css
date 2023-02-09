@@ -36,7 +36,8 @@ body {
     size: 20px;
 }
 .btn-darkselectionSort, .btn-darkbubbleSort, .btn-darkinsertionSort, .btn-darkmergeSort, .btn-darkquickSort{
-    border: 1px solid green;
+    border: 1px solid rgb(28, 108, 178);
     background: none;
-    color:green;
+    color:rgb(28, 108, 178);
+    border-radius: 0.25rem;
 }
