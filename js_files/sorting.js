@@ -89,16 +89,26 @@ function createNewArray(noOfBars = 60) {
 
     // create an array of random numbers 
     array = [];
+    for (let i = 0; i < noOfBars; i++) {
+        array.push(Math.floor(Math.random() * 250) + 1);
+    }
+    console.log(array);
     // select the div #bars element
     const bars = document.querySelector("#bars");
 
-    // create multiple element div using loop and adding class 'bar col'
     for (let i = 0; i < noOfBars; i++) {
+        const bar = document.createElement("div");
+        bar.style.height = `${array[i]*2}px`;
+        bar.classList.add('bar');
+        bar.classList.add('flex-item');
+        bar.classList.add(`barNo${i}`);
+        bars.appendChild(bar);
+    }
+    // create multiple element div using loop and adding class 'bar col'
         //create element
         // update height of bar
         // add appropriate styling class to the element
         // add element to the DOM by appending to the div #bars
-    }
 }
 
 // Helper function to delete all the previous bars so that new can be added
