@@ -56,9 +56,15 @@ function waitforme(milisec) {
 /**
  * your task is to add event listener to the size slider and create new array using createNewArray(size) function
  */
+
 // Selecting size slider from DOM
 let arraySize = document.querySelector('#arr_sz');
+
 // add Event listener to update the bars on the UI
+arraySize.addEventListener('input', function(){
+    console.log(arraySize.value, typeof(arraySize.value));
+    createNewArray(parseInt(arraySize.value));
+});
 
 
 // Default input for waitforme function (260ms)
